@@ -16,3 +16,9 @@ libvirt:
     auth_unix_ro: 'none'
     auth_unix_rw: 'none'
     auth_tcp: 'none'
+
+  dirpools:
+    iso:
+      - path: /var/lib/libvirt/images/iso
+    images:
+      - path: /var/lib/libvirt/images/qcow2
