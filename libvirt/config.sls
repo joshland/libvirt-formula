@@ -11,6 +11,12 @@ libvirt.config:
     - template: jinja
     - source: salt://{{ slspath }}/templates/libvirtd.conf.jinja
 
+qemu.config:
+  file.managed:
+    - name: {{ libvirt_settings.qemu_config }}
+    - template: jinja
+    - source: salt://{{ slspath }}/templates/qemu.conf.jinja
+
 libvirt.daemonconfig:
   file.managed:
     - name: {{ libvirt_settings.daemon_config_path }}/{{ libvirt_settings.libvirt_service }}

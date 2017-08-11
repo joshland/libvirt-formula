@@ -4,6 +4,6 @@ libvirt:
   python_pkg: libvirt-python
   libvirt_service: libvirtd
   libvirtd_config: /etc/libvirt/libvirtd.conf
+  qemu_config: /etc/libvirt/qemu.conf
   daemon_config_path: {}
   extra_pkgs: []
-  

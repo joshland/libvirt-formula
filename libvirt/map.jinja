@@ -24,3 +24,4 @@ that differ from whats in defaults.yaml
 
 {# merge the actual libvirt pillar into the above combined dict #}
 {% set libvirt_settings = salt['pillar.get']('libvirt', default=lookup, merge=True) %}
+

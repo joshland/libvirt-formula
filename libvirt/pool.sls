@@ -28,7 +28,7 @@ dirpool {{ pool }}:
     - user: root
     - group: root
 
-{{  tmpl_path }}/{{ pool }}:
+{{  tmpl_path }}/{{ pool }}.xml:
   file.managed:
     - user:  root
     - group: root
@@ -46,6 +46,6 @@ dirpool {{ pool }}:
           </target>
         </pool> 
   cmd.run:
-    - name: virsh pool-define {{  tmpl_path }}/{{ pool }} && virsh pool-start {{ pool }}
+    - name: virsh pool-define {{  tmpl_path }}/{{ pool }}.xml && virsh pool-start {{ pool }}
     - unless: test -f /etc/libvirt/storage/{{ pool }}.xml
 {% endfor %}
